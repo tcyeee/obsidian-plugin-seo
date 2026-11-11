@@ -36,6 +36,8 @@ Write one description that reads naturally (not keyword-stuffed) but hits as man
 
 **Guardrail**: the description must not start with the plugin's own name (separate Obsidian submission-bot rule — see `obsidian-plugin-lint`'s manifest.json check). An SEO rewrite can accidentally reintroduce this.
 
+**Guardrail**: the description must not contain the word "Obsidian" anywhere — the submission bot flags this as redundant since the plugin directory context already implies it (`manifest.json` description field check). Keyword-stuffing with "Obsidian" to chase search terms will trip this error instead of helping discovery; drop it and rely on the benefit/category terms instead.
+
 ## Step 3 — Apply to manifest.json and package.json
 
 Keep both in sync — they're the same discovery surface duplicated across two files:
